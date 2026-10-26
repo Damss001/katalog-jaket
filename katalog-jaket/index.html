@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog curated casualwear dari C.P. Company, Stone Island, dan Fred Perry di Linzz Casual.">
+    <meta name="theme-color" content="#f3f1eb">
+    <title>Linzz Casual — Curated Premium Casualwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo-text" onclick="showPage('home'); return false;">
+                LINZZ <span class="gold-accent">CASUAL</span><span class="brand-mark">®</span>
+            </a>
+
+            <nav class="nav-brand-logos" aria-label="Pilih brand">
+                <button class="brand-nav-btn" onclick="showPage('brand-cp')" title="C.P. Company" aria-label="Lihat koleksi C.P. Company">
+                    <img src="img/logo1.png" alt="">
+                </button>
+                <button class="brand-nav-btn" onclick="showPage('brand-si')" title="Stone Island" aria-label="Lihat koleksi Stone Island">
+                    <img src="img/logo2.png" alt="">
+                </button>
+                <button class="brand-nav-btn" onclick="showPage('brand-fp')" title="Fred Perry" aria-label="Lihat koleksi Fred Perry">
+                    <img src="img/logo3.png" alt="">
+                </button>
+            </nav>
+
+            <nav class="nav-menu" aria-label="Navigasi utama">
+                <a href="#" class="nav-link active" onclick="showPage('home'); return false;">Beranda</a>
+                <a href="#catalog" class="nav-link" onclick="showPage('home'); setTimeout(() => document.getElementById('catalog').scrollIntoView({behavior:'smooth'}), 100); return false;">Katalog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="page-home" class="page-section active">
+            <div class="hero">
+                <div class="hero-copy">
+                    <p class="hero-kicker"><span></span> Curated menswear · Est. 2020</p>
+                    <h1 class="hero-title">LINZZ<br><em>CASUAL</em></h1>
+                    <p class="hero-desc">Potongan ikonis, material pilihan, dan gaya santai yang tetap terasa istimewa. Temukan koleksi pilihan dari label favorit dunia.</p>
+                    <div class="hero-actions">
+                        <a href="#catalog" class="btn btn-gold" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'}); return false;">Jelajahi koleksi <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/linzz.str/" class="instagram-link" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi Instagram @linzz.str">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram @linzz.str
+                        </a>
+                        <span class="hero-note">C.P. Company <span>·</span> Stone Island <span>·</span> Fred Perry</span>
+                    </div>
+                </div>
+                <figure class="hero-visual">
+                    <img src="img/cpcompany1.webp" alt="Jaket goggle C.P. Company berwarna abu-abu muda" fetchpriority="high">
+                    <figcaption class="hero-caption"><span>01 / OUTERWEAR</span><strong>Made for everyday icons</strong></figcaption>
+                    <span class="hero-side-note">THE NEW CLASSICS</span>
+                </figure>
+            </div>
+
+            <section class="brand-selection-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">The labels</p>
+                        <h2 class="section-title">Casual buat kamu jadi keren!!!</h2>
+                    </div>
+                    <p class="section-subtitle">Kurasi label dengan karakter kuat dan kualitas yang bertahan lama.</p>
+                </div>
+                
+                <div class="brand-cards-grid">
+                    <button class="brand-card" onclick="showPage('brand-cp')">
+                        <div class="brand-card-logo">
+                            <img src="img/logo1.png" alt="Logo C.P. Company">
+                        </div>
+                        <h3>C.P. Company</h3>
+                        <p>Eksplorasi material dan inovasi outerwear Italia.</p>
+                        <span class="brand-link-btn">Lihat koleksi <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                    </button>
+
+                    <button class="brand-card" onclick="showPage('brand-si')">
+                        <div class="brand-card-logo">
+                            <img src="img/logo2.png" alt="Logo Stone Island">
+                        </div>
+                        <h3>Stone Island</h3>
+                        <p>Riset tekstil dan desain utilitarian yang ikonis.</p>
+                        <span class="brand-link-btn">Lihat koleksi <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                    </button>
+
+                    <button class="brand-card" onclick="showPage('brand-fp')">
+                        <div class="brand-card-logo">
+                            <img src="img/logo3.png" alt="Logo Fred Perry">
+                        </div>
+                        <h3>Fred Perry</h3>
+                        <p>Warisan gaya Britania dengan sentuhan kontemporer.</p>
+                        <span class="brand-link-btn">Lihat koleksi <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                    </button>
+                </div>
+            </section>
+
+            <section id="catalog" class="catalog-section">
+                <div class="catalog-header">
+                    <div>
+                        <p class="eyebrow">Selected for you</p>
+                        <h2 class="section-title">The collection</h2>
+                        <p class="section-subtitle">Pilihan terbaik untuk keseharian yang lebih berkarakter.</p>
+                    </div>
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input type="search" id="search-input" placeholder="Cari produk atau brand..." oninput="filterProducts()" aria-label="Cari produk atau brand">
+                    </label>
+                </div>
+
+                <div class="product-grid" id="all-products-grid">
+                    <!-- Injected via JS -->
+                </div>
+            </section>
+        </section>
+
+        <section id="page-brand-cp" class="page-section">
+            <div class="brand-banner">
+                <button class="btn-back" onclick="showPage('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</button>
+                <div class="brand-banner-content">
+                    <img src="img/logo1.png" class="brand-page-logo" alt="C.P. Company">
+                    <h1>C.P. COMPANY</h1>
+                    <p class="brand-tagline">"Functionality & Garment Dyeing Innovation Since 1971"</p>
+                </div>
+            </div>
+            <div class="product-grid" id="cp-products-grid"></div>
+        </section>
+
+        <section id="page-brand-si" class="page-section">
+            <div class="brand-banner">
+                <button class="btn-back" onclick="showPage('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</button>
+                <div class="brand-banner-content">
+                    <img src="img/logo2.png" class="brand-page-logo" alt="Stone Island">
+                    <h1>STONE ISLAND</h1>
+                    <p class="brand-tagline">"Inovasi Material & Ikon Kompas Kasual Kelas Dunia"</p>
+                </div>
+            </div>
+            <div class="product-grid" id="si-products-grid"></div>
+        </section>
+
+        <section id="page-brand-fp" class="page-section">
+            <div class="brand-banner">
+                <button class="btn-back" onclick="showPage('home')"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</button>
+                <div class="brand-banner-content">
+                    <img src="img/logo3.png" class="brand-page-logo" alt="Fred Perry">
+                    <h1>FRED PERRY</h1>
+                    <p class="brand-tagline">"Subkultur Britania & Warisan Desain Laurel Wreath Iconic"</p>
+                </div>
+            </div>
+            <div class="product-grid" id="fp-products-grid"></div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Tutup detail produk"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-wrapper">
+                    <img id="modal-img" src="" alt="Detail Produk">
+                    <span id="modal-format-badge" class="format-badge">.WEBP</span>
+                </div>
+                <div class="modal-details">
+                    <span id="modal-brand" class="brand-tag">BRAND</span>
+                    <h2 id="modal-title">Nama Produk</h2>
+                    <p id="modal-price" class="price">Rp 0</p>
+                    
+                    <div class="specs-box">
+                        <h4><i class="fa-solid fa-sliders"></i> Spesifikasi Produk:</h4>
+                        <ul id="modal-specs-list">
+                            <!-- Injected by JS -->
+                        </ul>
+                    </div>
+
+                    <div class="order-section">
+                        <label for="select-size">Pilih Ukuran:</label>
+                        <select id="select-size" class="size-select">
+                            <option value="S">Small (S)</option>
+                            <option value="M" selected>Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                            <option value="XL">Extra Large (XL)</option>
+                        </select>
+                        <button class="btn btn-whatsapp" onclick="sendWhatsAppOrder()">
+                            <i class="fa-brands fa-whatsapp"></i> Order Via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 <strong>Linzz Casual</strong><span>Curated pieces for everyday life.</span><a href="https://www.instagram.com/linzz.str/" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram @linzz.str</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
